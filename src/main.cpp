@@ -6,10 +6,16 @@ using namespace sf;
 int main() {
 
     //create video mode object
-    VideoMode vm(1920,1080);
+    VideoMode vm(960,540);
 
     //Create and open a window for the game
-    RenderWindow window(vm,"Timber Game",Style::Fullscreen);
+    // RenderWindow window(vm,"Timber Game",Style::Fullscreen);
+
+    //low resolution code
+    RenderWindow window(vm,"Timber Game");
+    View view(FloatRect(0,0,1920,1080));
+    window.setView(view);
+    //end low resolution code
 
     //create texture to hold graphic on GPU
     Texture textureBackground;
@@ -66,20 +72,36 @@ int main() {
     spriteCloud3.setPosition(0,500);
 
     //are clouds currently on screen
+    bool cloud1Active = false;
+    bool cloud2Active = false;
+    bool cloud3Active = false;
 
+    //how fast is the cloud
+    float cloud1Speed = 0.0f;
+    float cloud2Speed = 0.0f;
+    float cloud3speed = 0.0f;
+
+    //variable to control time itself
+    Clock clock;
 
 
     while(window.isOpen()){
         /*
         handle player input
         */
+       Event event;
+       while(window.pollEvent(event)){
        if(Keyboard::isKeyPressed(Keyboard::Escape)){
            window.close();
+       }
        }
 
        /*
        update scene
        */
+
+      //Measure time
+      Time dt = clock.restart();
 
        /*
        draw scene
@@ -90,6 +112,18 @@ int main() {
 
       //draw game scene
       window.draw(spriteBackground);
+
+      //draw clouds
+      window.draw(spriteCloud1);
+      window.draw(spriteCloud2);
+      window.draw(spriteCloud3);
+
+      //draw tree
+      window.draw(spriteTree);
+
+      //draw insect
+      window.draw(spriteBee);
+
       
       //show drawing
       window.display();
