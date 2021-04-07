@@ -169,7 +169,7 @@ int main() {
         cloud2Speed = (rand() % 200);
 
         //how high is the cloud
-        srand((int)time(0) * 10);
+        srand((int)time(0) * 20);
         float height = (rand() % 300) - 150;
         spriteCloud2.setPosition(-200, height);
         cloud2Active = true;
@@ -187,13 +187,14 @@ int main() {
         }
       }
 
+//cloud 3
       if(!cloud3Active){
         //how fast is the cloud
         srand((int)time(0) * 30);
         cloud3speed = (rand() % 200);
 
         //how high is the cloud
-        srand((int)time(0) * 10);
+        srand((int)time(0) * 30);
         float height = (rand() % 450)-150;
         spriteCloud3.setPosition(-200, height);
         cloud3Active = true;
