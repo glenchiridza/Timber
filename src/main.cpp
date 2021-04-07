@@ -103,6 +103,35 @@ int main() {
       //Measure time
       Time dt = clock.restart();
 
+      //setup bee
+      if(!beeActive){
+
+        //how fast is the bee
+        srand((int)time(0));
+        beeSpeed = (rand() % 200) +200;
+
+        //how high is the bee
+        srand((int)time(0) * 10);
+        float height = (rand() % 500) + 500;
+        spriteBee.setPosition(2000, height);
+
+        beeActive = true;
+      }
+      else{
+        spriteBee.setPosition(
+          spriteBee.getPosition().x - (beeSpeed * dt.asSeconds()),
+          spriteBee.getPosition().y
+        );
+
+        //has the bee reached the left hand edge of the screen
+        if(spriteBee.getPosition().x < -100){
+
+          //set it up ready to be a whole new bee next frame
+          beeActive = false;
+        }
+      }
+
+
        /*
        draw scene
        */
