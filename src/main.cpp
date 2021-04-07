@@ -148,8 +148,8 @@ int main() {
       }else{
 
         spriteCloud1.setPosition(
-          spriteCloud1.getPosition().x -
-          (cloud1Speed - dt.asSeconds()),
+          spriteCloud1.getPosition().x +
+          (cloud1Speed * dt.asSeconds()),
           spriteCloud1.getPosition().y
         );
 
@@ -175,6 +175,12 @@ int main() {
         cloud2Active = true;
       }else{
 
+        spriteCloud2.setPosition(
+          spriteCloud2.getPosition().x +
+          (cloud2Speed * dt.asSeconds()),
+          spriteCloud2.getPosition().y
+        );
+
         if(spriteCloud2.getPosition().x > 1920){
           //set it up ready to be a new cloud in next frame
           cloud2Active = false;
@@ -192,7 +198,11 @@ int main() {
         spriteCloud3.setPosition(-200, height);
         cloud3Active = true;
       }else{
-        
+        spriteCloud3.setPosition(
+          spriteCloud3.getPosition().x +
+          (cloud3speed * dt.asSeconds()),
+          spriteCloud3.getPosition().y
+        );
         if(spriteCloud3.getPosition().x > 1920){
           //set it up ready to be a new cloud in next frame
           cloud3Active = false;
