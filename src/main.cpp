@@ -104,6 +104,23 @@ int main() {
     msg.setString("Press enter to start");
     scoreTxt.setString("Score = 0");
 
+    //make it really big
+    msg.setCharacterSize(65);
+    scoreTxt.setString("Score = 0");
+
+    //choose a color
+    msg.setFillColor(Color::White);
+    scoreTxt.setFillColor(Color::White);
+
+    //position the text
+    FloatRect textRect = msg.getLocalBounds();
+    msg.setOrigin(textRect.left + 
+        textRect.width / 2.0f,
+        textRect.top +
+        textRect.height / 2.0f);
+        
+    msg.setPosition(20,20);
+  
 
 
     while(window.isOpen()){
