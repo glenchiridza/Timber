@@ -107,6 +107,8 @@ int main() {
        update scene
        */
 
+      if(!paused){
+
       //Measure time
       Time dt = clock.restart();
 
@@ -216,6 +218,7 @@ int main() {
           cloud3Active = false;
         }
          }
+      } //end if pause
 
        /*
        draw scene
