@@ -119,7 +119,8 @@ int main() {
         textRect.top +
         textRect.height / 2.0f);
         
-    msg.setPosition(20,20);
+    msg.setPosition(1920 / 2.0f,1080/2.0f);    
+    scoreTxt.setPosition(20,20);
   
 
 
