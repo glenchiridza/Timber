@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include "SFML/Graphics.hpp"
 
 using namespace sf;
@@ -85,6 +86,24 @@ int main() {
     Clock clock;
 
     bool paused  = true;
+
+    //draw text
+
+    Text msg;
+    Text scoreTxt;
+
+//load font
+    Font font;
+    font.loadFromFile("fonts/KOMIKAP_.tff");
+
+    //set font to our message
+    msg.setFont(font);
+    scoreTxt.setFont(font);
+
+    //assign the actual message
+    msg.setString("Press enter to start");
+    scoreTxt.setString("Score = 0");
+
 
 
     while(window.isOpen()){
