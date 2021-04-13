@@ -84,6 +84,8 @@ int main() {
     //variable to control time itself
     Clock clock;
 
+    bool paused  = true;
+
 
     while(window.isOpen()){
         /*
@@ -93,6 +95,11 @@ int main() {
        while(window.pollEvent(event)){
        if(Keyboard::isKeyPressed(Keyboard::Escape)){
            window.close();
+       }
+
+       //start the game
+       if(Keyboard::isKeyPressed(Keyboard::Return)){
+         paused = false;
        }
        }
 
