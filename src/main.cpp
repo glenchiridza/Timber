@@ -88,7 +88,7 @@ int main() {
     bool paused  = true;
 
     //draw text
-
+    int score = 0;
     Text msg;
     Text scoreTxt;
 
@@ -255,6 +255,13 @@ int main() {
           cloud3Active = false;
         }
          }
+
+      // update score text
+
+      std::stringstream ss;
+      ss<<"Score = " << score;
+      scoreTxt.setString(ss.str());
+
       } //end if pause
 
        /*
@@ -277,6 +284,14 @@ int main() {
 
       //draw insect
       window.draw(spriteBee);
+
+      //draw the score
+      window.draw(scoreTxt);
+
+      if(paused){
+        //draw message
+        window.draw(msg);
+      }
 
       
       //show drawing
