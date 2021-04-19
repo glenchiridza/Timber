@@ -173,7 +173,14 @@ int main() {
       timeRemaining  -= dt.asSeconds();
       //size up the time bar
       timebar.setSize(Vector2f(timeBarWidthPerSecond * timeRemaining, timeBarHeight));
-      
+
+      if(timeRemaining <= 0.0f){
+        //pause the game, time has run out
+        paused = true;
+
+        //change teh message shown to the player
+        
+      }
 
       //setup bee
       if(!beeActive){
