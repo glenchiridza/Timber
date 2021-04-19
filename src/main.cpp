@@ -336,6 +336,8 @@ int main() {
         window.draw(msg);
       }
 
+      //draw the timebar
+      window.draw(timebar);
       
       //show drawing
       window.display();
