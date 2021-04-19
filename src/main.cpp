@@ -94,7 +94,7 @@ int main() {
 
 //load font
     Font font;
-    font.loadFromFile("fonts/KOMIKAP_.tff");
+    font.loadFromFile("fonts/KOMIKAP_.ttf");
 
     //set font to our message
     msg.setFont(font);
@@ -137,6 +137,9 @@ int main() {
        //start the game
        if(Keyboard::isKeyPressed(Keyboard::Return)){
          paused = false;
+       }
+       if(Keyboard::isKeyPressed(Keyboard::Space)){
+         paused = true;
        }
        }
 
