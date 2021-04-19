@@ -85,6 +85,14 @@ int main() {
     //variable to control time itself
     Clock clock;
 
+    //time bar
+    RectangleShape timebar;
+    float timeBarStartWidth = 400;
+    float timeBarHeight = 80;
+    timebar.setSize(Vector2f(timeBarStartWidth, timeBarHeight));
+    timebar.setFillColor(Color::Red);
+    timebar.setPosition((1920 / 2) - timeBarStartWidth / 2, 980);
+
     bool paused  = true;
 
     //draw text
