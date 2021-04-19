@@ -93,6 +93,10 @@ int main() {
     timebar.setFillColor(Color::Red);
     timebar.setPosition((1920 / 2) - timeBarStartWidth / 2, 980);
 
+    Time gameTimeTotal;
+    float timeRemaining = 6.0f;
+    float timeBarWidthPerSecond = timeBarStartWidth / timeRemaining;
+
     bool paused  = true;
 
     //draw text
