@@ -178,8 +178,10 @@ int main() {
         //pause the game, time has run out
         paused = true;
 
-        //change teh message shown to the player
-        
+        //change the message shown to the player
+        msg.setString("out of time!");
+
+        //reposition the text based on its new size
       }
 
       //setup bee
