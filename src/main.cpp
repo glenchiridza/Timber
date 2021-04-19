@@ -182,6 +182,14 @@ int main() {
         msg.setString("out of time!");
 
         //reposition the text based on its new size
+        FloatRect textRect = msg.getLocalBounds();
+        msg.setOrigin(textRect.left + 
+          textRect.width / 2.0f,
+          textRect.top + 
+          textRect.height / 2.0f);
+
+          msg.setPosition(1920 / 2.0f, 1080 / 2.0f);
+
       }
 
       //setup bee
