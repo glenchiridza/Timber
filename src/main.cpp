@@ -149,6 +149,10 @@ int main() {
        //start the game
        if(Keyboard::isKeyPressed(Keyboard::Return)){
          paused = false;
+
+         //reset the time and score
+         score = 0;
+         timeRemaining = 6;
        }
        if(Keyboard::isKeyPressed(Keyboard::Space)){
          paused = true;
@@ -163,6 +167,13 @@ int main() {
 
       //Measure time
       Time dt = clock.restart();
+
+
+      //subtract from the amount of time remaining
+      timeRemaining  -= dt.asSeconds();
+      //size up the time bar
+      timebar.setSize(Vector2f(timeBarWidthPerSecond * timeRemaining, timeBarHeight));
+      
 
       //setup bee
       if(!beeActive){
