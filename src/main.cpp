@@ -388,6 +388,14 @@ int main() {
 
       //draw the timebar
       window.draw(timebar);
+
+      //draw the branches
+
+      for (int i = 0; i < NUM_BRANCHES; i++)
+      {
+        window.draw(branches[i]);
+      }
+      
       
       //show drawing
       window.display();
