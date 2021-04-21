@@ -150,7 +150,8 @@ int main() {
 
     //set the texture for each branch sprite
     for( int i =0; i < NUM_BRANCHES; i++){
-      
+      branches[i].setTexture(textureBranch);
+      branches[i].setPosition(-2000,-2000);
     }
 
 
