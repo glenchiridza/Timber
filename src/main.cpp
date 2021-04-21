@@ -10,6 +10,11 @@ void updateBranches(int seed);
 const int NUM_BRANCHES = 6;
 Sprite branches[NUM_BRANCHES];
 
+//position of player, left / right ?
+enum class side {LEFT, RIGHT, NONE};
+side branchPos[NUM_BRANCHES];
+
+
 int main() {
 
     //create video mode object
