@@ -330,6 +330,12 @@ int main() {
       //update branch sprites
       for (int i=0;i<NUM_BRANCHES;i++){
         float height = i * 150;
+
+        if(branchPos[i] == side::LEFT)
+        {
+          //move sprite to the left
+          branches[i].setPosition(610, height);
+        }
         
       }
 
