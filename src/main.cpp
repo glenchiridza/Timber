@@ -157,6 +157,11 @@ int main() {
       branches[i].setOrigin(220,20);
     }
 
+updateBranches(1);
+updateBranches(2);
+updateBranches(3);
+updateBranches(4);
+updateBranches(5);
 
     while(window.isOpen()){
         /*
@@ -372,6 +377,13 @@ int main() {
       window.draw(spriteCloud2);
       window.draw(spriteCloud3);
 
+       //draw the branches
+
+      for (int i = 0; i < NUM_BRANCHES; i++)
+      {
+        window.draw(branches[i]);
+      }
+
       //draw tree
       window.draw(spriteTree);
 
@@ -389,12 +401,7 @@ int main() {
       //draw the timebar
       window.draw(timebar);
 
-      //draw the branches
-
-      for (int i = 0; i < NUM_BRANCHES; i++)
-      {
-        window.draw(branches[i]);
-      }
+     
       
       
       //show drawing
@@ -418,20 +425,22 @@ int main() {
     srand((int) time(0) + seed);
     int r = (rand() % 5);
 
-//organize branch sides from top to bottom
-// as we decrease the branches, they will be interchanging their position when at the position 0
-
+// The case statements mean that if r is equal to zero, then we add a new branch to
+// the left-hand side, at the top of the tree. If r is equal to 1, then the branch goes to the
+// right. If r is anything else, (2, 3, or 4), then default ensures no branch will be added
+// at the top.
     switch (r)
     {
     case 0:
-    branchPos[0] = side::LEFT;
-    break;
+        branchPos[0] = side::LEFT;
+        break;
 
     case 1:
-    branchPos[0] == side::RIGHT;
+        branchPos[0] == side::RIGHT;
+        break;
 
     default:
-    branchPos[0] == side::NONE;
-    break;
+        branchPos[0] == side::NONE;
+        break;
     }
   }
