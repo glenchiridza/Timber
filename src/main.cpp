@@ -404,3 +404,12 @@ int main() {
 
 
   }
+
+  void updateBranches(int seed)
+  {
+    //move all the branches down one place
+    for (int j = NUM_BRANCHES-1;j>0;j--)
+    {
+      branchPos[j] = branchPos[j-1];
+    }
+  }
