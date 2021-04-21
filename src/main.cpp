@@ -418,9 +418,20 @@ int main() {
     srand((int) time(0) + seed);
     int r = (rand() % 5);
 
+//organize branch sides from top to bottom
+// as we decrease the branches, they will be interchanging their position when at the position 0
+
     switch (r)
     {
     case 0:
-    
+    branchPos[0] = side::LEFT;
+    break;
+
+    case 1:
+    branchPos[0] == side::RIGHT;
+
+    default:
+    branchPos[0] == side::NONE;
+    break;
     }
   }
