@@ -327,6 +327,12 @@ int main() {
       ss<<"Score = " << score;
       scoreTxt.setString(ss.str());
 
+      //update branch sprites
+      for (int i=0;i<NUM_BRANCHES;i++){
+        float height = i * 150;
+        
+      }
+
       } //end if pause
 
        /*
