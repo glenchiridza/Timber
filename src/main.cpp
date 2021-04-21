@@ -4,6 +4,12 @@
 
 using namespace sf;
 
+//function declaration
+void updateBranches(int seed);
+
+const int NUM_BRANCHES = 6;
+Sprite branches[NUM_BRANCHES];
+
 int main() {
 
     //create video mode object
