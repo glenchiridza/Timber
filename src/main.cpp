@@ -346,6 +346,12 @@ int main() {
           //set rotation to normal
           branches[i].setRotation(0);
         }
+        else
+        {
+          //hide branch
+          branches[i].setPosition(3000,height);
+        }
+        
 
       }
 
