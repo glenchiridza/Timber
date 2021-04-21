@@ -14,7 +14,6 @@ Sprite branches[NUM_BRANCHES];
 enum class side {LEFT, RIGHT, NONE};
 side branchPos[NUM_BRANCHES];
 
-
 int main() {
 
     //create video mode object
@@ -145,6 +144,9 @@ int main() {
     msg.setPosition(1920 / 2.0f,1080/2.0f);    
     scoreTxt.setPosition(20,20);
   
+  //prepare 6 branches
+    Texture textureBranch;
+    textureBranch.loadFromFile("graphics/branch.png");
 
 
     while(window.isOpen()){
