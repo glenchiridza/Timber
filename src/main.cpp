@@ -340,7 +340,11 @@ int main() {
           branches[i].setRotation(180);
         }else if (branchPos[i] == side::RIGHT)
         {
-          
+          //move the sprite to the right side
+          branches[i].setPosition(1330,height);
+
+          //set rotation to normal
+          branches[i].setRotation(0);
         }
 
       }
