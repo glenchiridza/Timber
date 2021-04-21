@@ -412,4 +412,15 @@ int main() {
     {
       branchPos[j] = branchPos[j-1];
     }
+
+    //spawn a new branch at position 0, top of tree
+    //LEFT RIGHT OR NONE
+    srand((int) time(0) + seed);
+    int r = (rand() % 5);
+
+    switch (r)
+    {
+    case 0:
+    
+    }
   }
