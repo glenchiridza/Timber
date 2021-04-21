@@ -335,8 +335,14 @@ int main() {
         {
           //move sprite to the left
           branches[i].setPosition(610, height);
+
+          //flip the sprite around the other ay
+          branches[i].setRotation(180);
+        }else if (branchPos[i] == side::RIGHT)
+        {
+          
         }
-        
+
       }
 
       } //end if pause
