@@ -148,6 +148,11 @@ int main() {
     Texture textureBranch;
     textureBranch.loadFromFile("graphics/branch.png");
 
+    //set the texture for each branch sprite
+    for( int i =0; i < NUM_BRANCHES; i++){
+      
+    }
+
 
     while(window.isOpen()){
         /*
